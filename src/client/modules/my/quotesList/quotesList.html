@@ -1,0 +1,18 @@
+<template>
+  <div class="listButton">
+    <button onclick={goToHome} type="submit">Scroll</button>
+  </div>
+  <div>
+    <template for:each={quotes} for:item="quote">
+      <template if:false={quote.Picture}>
+        <p key={quote.Id}>{quote.Text}</p>
+      </template>
+      <template if:true={quote.Picture}>
+        <img key={quote.Id} src={quote.PicSrc} alt={quote.Text} width="75%" height="75%">
+      </template>
+    </template>
+  </div>
+  <div class="listButton">
+    <button onclick={goToHome} type="submit">Scroll</button>
+  </div>
+</template>

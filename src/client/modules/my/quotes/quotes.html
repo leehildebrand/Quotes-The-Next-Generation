@@ -1,0 +1,25 @@
+<template>
+    <div class={animationClass} onanimationend={handleAnimationEnd}>
+        <template if:true={quote.Picture}>
+            <img alt={quote.Text} src={quote.PicSrc} />
+        </template>
+        <template if:false={quote.Picture}>
+            <span class="quote">{quote.Text}</span>
+        </template>
+    </div>
+    <div>
+        <button class="nextButton" onclick={handleNext}>
+            {nextButtonText}
+        </button>
+    </div>
+    <div>
+        <button class="pauseButton" onclick={handlePause}>
+            {pauseButtonText}
+        </button>
+    </div>
+    <div>
+        <button class="previousButton" onclick={handlePrevious}>
+            {previousButtonText}
+        </button>
+    </div>
+</template>
